@@ -1,0 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/23 20:52:15 by gabarnou          #+#    #+#             */
+/*   Updated: 2024/04/23 20:52:38 by gabarnou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "fractal.h"
+
+void	init_mlx(t_fractal *fractal)
+{
+	fractal->mlx = mlx_init();
+	fractal->window = mlx_new_window(fractal->mlx, SIZE, SIZE, "Fractol !");
+	fractal->img = mlx_new_image(fractal->mlx, SIZE, SIZE);
+	fractal->addr_img = mlx_get_data_addr(fractal->img,
+			&fractal->bits_per_pixel,
+			&fractal->lenght_line,
+			&fractal->endian);
+}
+
+void	init_fractal(t_fractal *fractal)
+{
+	fractal->x = 0;
+	fractal->y = 0;
+	fractal->color = 0xFCBE11;
+	fractal->zoom = 300;
+	fractal->offset_x = -1.21;
+	fractal->offset_y = -1.21;
+	fractal->max_iterations = 42;
+}

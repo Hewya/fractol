@@ -1,5 +1,5 @@
 CC			= cc
-CFLAGS		= -Wall -Werror -Wextra -g
+CFLAGS		= -Wall -Werror -Wextra -Ofast
 NAME		= fractol
 
 SRCS		=	moves		\
@@ -7,9 +7,14 @@ SRCS		=	moves		\
 				calculs_mandel		\
 				calculs_julia	\
 				fractol	\
+				main \
+				utils \
 
 INCS		=	-I libft \
 				-I get_next_line \
+
+INCS_ARCHIVES 	=	libft/libft.a \
+
 
 SRC			= $(addsuffix .c, $(SRCS))
 OBJ			= $(addsuffix .o, $(SRCS))
@@ -18,7 +23,8 @@ all: $(NAME)
 
 $(NAME) : $(OBJ)
 	$(MAKE) -C libft
-	$(CC) $(CFLAGS) -o $@ $(OBJ) libft/libft.a
+	$(MAKE) -C minilibx
+	$(CC) $(CFLAGS) -o $@ $(OBJ) $(INC_ARCHIVES) $(LINKS)
 
 %.o: %.c
 	$(CC) -c -o $@ $< $(CFLAGS) $(INCS)
