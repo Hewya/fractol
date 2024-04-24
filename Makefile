@@ -11,7 +11,7 @@ SRCS		=	moves		\
 				calculs_julia	\
 				main \
 				utils \
-				init and exit \
+				init_exit \
 
 INCS		=	-I libft \
 				-I get_next_line \

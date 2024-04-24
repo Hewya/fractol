@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 18:26:00 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/04/24 15:45:37 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/04/24 19:18:48 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	mouse_hooked(int mouse_code, int x, int y, t_fractal *fractal)
 		zoom(fractal, x, y, 1);
 	else if (mouse_code == SCROLL_DOWN)
 		zoom(fractal, x, y, -1);
-	draw_fractal(fractal, fractal->name);
+	//draw_fractal(fractal, fractal->name);
 	return (0);
 }
 
