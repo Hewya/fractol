@@ -6,12 +6,11 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:28:29 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/04/23 20:15:09 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/04/24 15:40:55 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
-
 
 void	*draw_mandelbrot(void *fractal_void)
 {
@@ -24,7 +23,7 @@ void	*draw_mandelbrot(void *fractal_void)
 	{
 		while (fractal->y < SIZE)
 		{
-			calculate_mandelbrot(fractal);
+			calcul_mandel(fractal);
 			fractal->y++;
 		}
 		fractal->x++;

@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 18:44:30 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/04/23 20:51:45 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/04/24 15:40:39 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,9 @@ int	main()
 	init_fractal(fractal);
 	mlx_key_hook(fractal->window, key_hooked, fractal);
 	mlx_mouse_hook(fractal->window, mouse_hooked, fractal);
-	mlx_hook(fractal->window, 17, 1L << 17, close_all, fractal);
-											// que free + exit peut-etre mieux
+	mlx_hook(fractal->window, 17, 1L << 17, close_all, fractal); 
+
 	// LANCER CALCUL ET AFFICHAGE
 	mlx_loop(fractal->mlx);
-	close_all(fractal);
 	return(0);
 }

@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:28:44 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/04/23 20:42:19 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/04/24 15:37:18 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <fcntl.h>					/*open, close*/
 # include <math.h>					/*fabs*/
-# include "minilibx/mlx.h" 			/*includes minilibx*/
+# include "minilibx-linux/mlx.h"	/*includes minilibx*/
 # include "libft/libft.h"			/*libft...*/
 
 # define SIZE 700
@@ -49,9 +49,9 @@ typedef struct s_fractal
 	int		x;
 	int		y;
 	int		color;
-	double	offset_x;
-	double	offset_y;
 	double	zoom;
+	double	offset_x; // si augmente affichage decaler vers la droite
+	double	offset_y; // si augmente affichage decaler vers le haut
 
 	double	zx;
 	double	zy;
@@ -62,15 +62,22 @@ typedef struct s_fractal
 	int		max_iterations;
 }			t_fractal;
 
-/* UTILS */
+/* INIT AND EXIT */
+void	init_mlx(t_fractal *fractal);
+void	init_fractal(t_fractal *fractal);
 int		close_all(t_fractal *fractal);
+int		free_fractal(t_fractal *fractal);
+
+/* UTILS */
 int		key_hooked(int key_code, t_fractal *fractal);
 int		mouse_hooked(int mouse_code, int x, int y, t_fractal *fractal);
 void	color_pixel(t_fractal *fractal, int x, int y, int color);
 
 /* DISPLAY */
-void	init_mlx(t_fractal *fractal);
-void	init_fractal(t_fractal *fractal);
+void	*draw_mandelbrot(void *fractal_void);
+
+/* CALCULS_MANDEL */
+void	calcul_mandel(t_fractal *fractal);
 
 /* MAIN */
 int	main();

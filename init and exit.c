@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init.c                                             :+:      :+:    :+:   */
+/*   init and exit.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 20:52:15 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/04/23 20:52:38 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/04/24 15:49:19 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractal.h"
+#include "fractol.h"
 
 void	init_mlx(t_fractal *fractal)
 {
@@ -32,4 +32,21 @@ void	init_fractal(t_fractal *fractal)
 	fractal->offset_x = -1.21;
 	fractal->offset_y = -1.21;
 	fractal->max_iterations = 42;
+}
+int	close_all(t_fractal *fractal)
+{
+	mlx_destroy_image(fractal->mlx, fractal->img);
+	mlx_destroy_window(fractal->mlx, fractal->window);
+	free(fractal->mlx);
+	free(fractal);
+	exit(1);
+	return (0);
+}
+
+int	free_fractal(t_fractal *fractal)
+{
+	free(fractal->mlx);
+	free(fractal);
+	exit(1);
+	return (0);
 }
