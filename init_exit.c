@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init and exit.c                                    :+:      :+:    :+:   */
+/*   init_exit.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 20:52:15 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/04/24 15:49:19 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/04/25 16:55:07 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ void	init_fractal(t_fractal *fractal)
 	fractal->x = 0;
 	fractal->y = 0;
 	fractal->color = 0xFCBE11;
-	fractal->zoom = 300;
+	fractal->zoom = 350;
 	fractal->offset_x = -1.21;
 	fractal->offset_y = -1.21;
-	fractal->max_iterations = 42;
+	fractal->max_iterations = 150;
 }
 int	close_all(t_fractal *fractal)
 {

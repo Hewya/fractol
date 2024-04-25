@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:28:44 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/04/24 19:21:04 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/04/25 16:55:30 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,11 @@
 # include <math.h>					/*fabs*/
 # include "minilibx-linux/mlx.h"	/*includes minilibx*/
 # include "libft/libft.h"			/*libft...*/
+# include "X11/keysym.h"
 
 # define SIZE 700
 
-/* KEYCODES & MOUSE CODES */
-# define ESC 53
-# define UP 126
-# define DOWN 125
-# define LEFT 123
-# define RIGHT 124
-# define R 15
-# define C 8
-# define J 38
-# define P 35
-# define M 46
+/* MOUSE CODES */
 # define SCROLL_UP 4
 # define SCROLL_DOWN 5
 
@@ -74,6 +65,7 @@ int		mouse_hooked(int mouse_code, int x, int y, t_fractal *fractal);
 void	color_pixel(t_fractal *fractal, int x, int y, int color);
 
 /* DISPLAY */
+int	draw_fractal(t_fractal *fractal, char *str);
 void	*draw_mandelbrot(void *fractal_void);
 
 /* CALCULS_MANDEL */
