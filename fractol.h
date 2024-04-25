@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:28:44 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/04/25 16:55:30 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/04/25 17:00:21 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include "libft/libft.h"			/*libft...*/
 # include "X11/keysym.h"
 
-# define SIZE 700
+# define SIZE 1200
 
 /* MOUSE CODES */
 # define SCROLL_UP 4

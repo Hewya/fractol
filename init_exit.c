@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 20:52:15 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/04/25 16:55:07 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/04/25 17:05:33 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ void	init_fractal(t_fractal *fractal)
 	fractal->y = 0;
 	fractal->color = 0xFCBE11;
 	fractal->zoom = 350;
-	fractal->offset_x = -1.21;
-	fractal->offset_y = -1.21;
+	fractal->offset_x = -2.05;
+	fractal->offset_y = -1.33;
 	fractal->max_iterations = 150;
 }
 int	close_all(t_fractal *fractal)

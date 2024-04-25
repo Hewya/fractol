@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 18:26:00 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/04/25 16:57:36 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/04/25 16:59:49 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	key_hooked(int key_code, t_fractal *fractal)
 		fractal->color += (255 * 255 * 255) / 100;
 	// else if (key_code == J)
 	// 	set_random_julia(&fractal->cx, &fractal->cx);
-	else if (key_code == XK_m || key_code == XK_p)
+	//else if (key_code == XK_m || key_code == XK_p)
 	//	change_iterations(fractal, key_code);
 	draw_fractal(fractal, fractal->name);
 	return (0);
