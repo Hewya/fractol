@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:28:44 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/04/25 17:00:21 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/04/30 17:11:53 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,12 @@ typedef struct s_fractal
 	int		max_iterations;
 }			t_fractal;
 
+typedef struct
+{
+	double x;
+	double y;
+} Point;
+
 /* INIT_EXIT */
 void	init_mlx(t_fractal *fractal);
 void	init_fractal(t_fractal *fractal);
@@ -63,6 +69,9 @@ int		free_fractal(t_fractal *fractal);
 int		key_hooked(int key_code, t_fractal *fractal);
 int		mouse_hooked(int mouse_code, int x, int y, t_fractal *fractal);
 void	color_pixel(t_fractal *fractal, int x, int y, int color);
+double	opacite(double distance);
+double	distance_entre_points(Point p1, Point p2);
+double	distance_depuis_centre_fractale(int x, int y, int centre_x, int centre_y);
 
 /* DISPLAY */
 int	draw_fractal(t_fractal *fractal, char *str);
