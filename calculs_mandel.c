@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:28:38 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/04/30 17:24:57 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/05/01 16:28:36 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	calcul_mandel(t_fractal *fractal)
 	int		i;
 	double	temp;
 
-	i = 0; // iteration das la boucle
+	i = 0; // iteration dans la boucle
 
 	// initialisation de la variable complexe
 	fractal->zx = 0.0;

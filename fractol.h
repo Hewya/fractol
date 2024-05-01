@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:28:44 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/05/01 11:31:13 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/05/01 16:27:43 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,11 @@ typedef struct s_fractal
 	int		max_iterations;
 }			t_fractal;
 
-typedef struct
-{
-	double x;
-	double y;
-} Point;
+// typedef struct
+// {
+// 	double x;
+// 	double y;
+// } Point;
 
 /* INIT_EXIT */
 void	init_mlx(t_fractal *fractal);
@@ -75,9 +75,6 @@ void	*draw_mandelbrot(void *fractal_void);
 
 /* COLORS */
 void	color_pixel(t_fractal *fractal, int x, int y, int color);
-double	opacite(double distance);
-double	distance_entre_points(Point p1, Point p2);
-double	distance_depuis_centre_fractale(int x, int y, int centre_x, int centre_y);
 
 /* CALCULS_MANDEL */
 void	calcul_mandel(t_fractal *fractal);
