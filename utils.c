@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 18:26:00 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/05/01 11:48:13 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/05/02 16:51:06 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,50 @@ int	mouse_hooked(int mouse_code, int x, int y, t_fractal *fractal)
 	return (0);
 }
 
+double ft_atod(char *str)
+{
+	double result = 0.0;
+	int i = 0;
+	int sign = 1;
+	int decimal = 0;
+	double decimal_place = 1.0;
 
+	if (str[i] == '-')
+	{
+		sign = -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		result = result * 10.0 + (str[i] - '0');
+		i++;
+	}
+	if (str[i] == '.')
+	{
+		i++;
+		while (str[i] >= '0' && str[i] <= '9')
+		{
+			result = result * 10.0 + (str[i] - '0');
+			decimal++;
+			i++;
+		}
+		while (decimal > 0)
+		{
+			decimal_place *= 10.0;
+			decimal--;
+		}
+		result /= decimal_place;
+	}
 
+	return result * sign;
+}
+/*
 
+index pour
+aller a la fin ave un *tmp
+reculer jusqu'au "."
+envoyer a atoi
+remplacer "." pa "/0"
+reculer jusqu'au 
+
+*/

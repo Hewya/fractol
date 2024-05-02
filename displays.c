@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:28:29 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/04/25 16:38:58 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/05/02 16:00:09 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ int	draw_fractal(t_fractal *fractal, char *str)
 	if (ft_strncmp(str, "mandel", 7) == 0)
 		draw_mandelbrot(fractal);
 	else if (ft_strncmp(str, "julia", 6) == 0)
-		printf("JULIA!");
-		//draw_julia(fractal);
+		draw_julia(fractal);
 	else if (ft_strncmp(str, "autre", 6) == 0)
 		printf("autre!");
 		//draw_autre(fractal);
@@ -44,4 +43,20 @@ void	*draw_mandelbrot(void *fractal_void)
 		fractal->y = 0;
 	}
 	return (NULL);
+}
+
+void	draw_julia(t_fractal *fractal)
+{
+	fractal->x = 0;
+	fractal->y = 0;
+	while (fractal->x < SIZE)
+	{
+		while (fractal->y < SIZE)
+		{
+			calculate_julia(fractal);
+			fractal->y++;
+		}
+		fractal->x++;
+		fractal->y = 0;
+	}
 }

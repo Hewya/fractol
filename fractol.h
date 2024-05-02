@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:28:44 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/05/01 16:27:43 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/05/02 14:47:19 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,12 +72,16 @@ int		mouse_hooked(int mouse_code, int x, int y, t_fractal *fractal);
 /* DISPLAY */
 int		draw_fractal(t_fractal *fractal, char *str);
 void	*draw_mandelbrot(void *fractal_void);
+void	draw_julia(t_fractal *fractal);
 
 /* COLORS */
 void	color_pixel(t_fractal *fractal, int x, int y, int color);
 
 /* CALCULS_MANDEL */
 void	calcul_mandel(t_fractal *fractal);
+
+/* CALCULS_JULIA */
+void	calculate_julia(t_fractal *fractal);
 
 /* MOVES */
 void	zoom(t_fractal *fractal, int x, int y, int zoom);
