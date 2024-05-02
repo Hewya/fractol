@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 18:44:30 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/05/02 16:54:31 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/05/02 17:05:52 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ int	main(int ac, char **av)
 	mlx_hook(fractal->window, 17, 0L, close_all, fractal);
 	if (ft_strcmp(fractal->name, "julia") == 0)
 	{
-		// fractal->cx = ft_atod(av[2]);
-		// fractal->cy = ft_atod(av[3]);
+		fractal->cx = ft_atod(av[2]);
+		fractal->cy = ft_atod(av[3]);
 	}
 	draw_fractal(fractal, fractal->name);
 	mlx_loop(fractal->mlx);

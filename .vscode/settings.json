@@ -5,6 +5,7 @@
 		"system_error": "c",
 		"typeinfo": "c",
 		"keysym.h": "c",
-		"keysymdef.h": "c"
+		"keysymdef.h": "c",
+		"math.h": "c"
 	}
 }

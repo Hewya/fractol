@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:28:44 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/05/02 14:47:19 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/05/02 17:06:31 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ int		free_fractal(t_fractal *fractal);
 /* UTILS */
 int		key_hooked(int key_code, t_fractal *fractal);
 int		mouse_hooked(int mouse_code, int x, int y, t_fractal *fractal);
+double	ft_atod(char *str);
 
 /* DISPLAY */
 int		draw_fractal(t_fractal *fractal, char *str);
