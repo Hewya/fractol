@@ -8,8 +8,9 @@ INC_ARCHIVES	= libft/libft.a minilibx-linux/libmlx_Linux.a
 
 SRCS		=	moves		\
 				displays		\
-				calculs_mandel		\
+				calculs_mandel	\
 				calculs_julia	\
+				calculs_ship	\
 				main \
 				utils \
 				init_exit \

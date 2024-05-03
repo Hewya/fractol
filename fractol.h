@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:28:44 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/05/02 17:06:31 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/05/03 17:10:06 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <fcntl.h>					/*open, close*/
 # include <math.h>					/*fabs*/
+# include <stdlib.h>				/* abs */
 # include "minilibx-linux/mlx.h"	/*includes minilibx*/
 # include "libft/libft.h"			/*libft...*/
 # include "X11/keysym.h"
@@ -74,6 +75,7 @@ double	ft_atod(char *str);
 int		draw_fractal(t_fractal *fractal, char *str);
 void	*draw_mandelbrot(void *fractal_void);
 void	draw_julia(t_fractal *fractal);
+void	draw_ship(t_fractal *fractal);
 
 /* COLORS */
 void	color_pixel(t_fractal *fractal, int x, int y, int color);
@@ -82,7 +84,10 @@ void	color_pixel(t_fractal *fractal, int x, int y, int color);
 void	calcul_mandel(t_fractal *fractal);
 
 /* CALCULS_JULIA */
-void	calculate_julia(t_fractal *fractal);
+void	calcul_julia(t_fractal *fractal);
+
+/* CALCULS_SHIP */
+void	calcul_ship(t_fractal *fractal);
 
 /* MOVES */
 void	zoom(t_fractal *fractal, int x, int y, int zoom);

@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 18:44:30 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/05/02 17:05:52 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/05/03 15:35:41 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main(int ac, char **av)
 	{
 		ft_putendl_fd("Fractol: ./fractol <Name of the fractal>", 1);
 		ft_putendl_fd("Fractals can be: mandel, julia, autre", 1);
-		ft_putendl_fd("For julia needs name + 2 parametres", 1);
+		ft_putendl_fd("For julia needs name + 2 parametres (-0.745429 0.05)", 1);
 		return(0);
 	}
 	fractal = malloc(sizeof(t_fractal));

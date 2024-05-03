@@ -6,13 +6,13 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:28:34 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/05/02 16:00:36 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/05/03 17:06:12 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	calculate_julia(t_fractal *fractal)
+void	calcul_julia(t_fractal *fractal)
 {
 	int		i;
 	double	tmp;
