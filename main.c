@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 18:44:30 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/05/06 13:22:23 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/05/06 14:01:51 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@ void	ft_error(int i)
 	if (i > 0)
 	{
 		ft_putendl_fd("Fractol: ./fractol <Name of the fractal>", 1);
-		ft_putendl_fd("Fractals can be: mandel, julia, autre", 1);
+		ft_putendl_fd("Fractals can be: mandel, julia, ship", 1);
 		ft_putendl_fd("For julia needs 2 parametres (-0.745429 0.05)", 1);
+		exit(1);
 	}
 }
 
@@ -36,15 +37,17 @@ bool	is_valid_input(const char *str)
 
 void	check_params(int ac, char **av)
 {
-	if ((((!(ft_strncmp(av[1], "mandel", 7) == 0))
-				|| (!(ft_strncmp(av[1], "ship", 5) == 0)))
-			|| (!(ft_strncmp(av[1], "julia", 6) == 0))
-			|| (ac != 2))
-		|| ((ft_strncmp(av[1], "julia", 6) == 0) && (ac != 4)))
-	{
+	if ((ac < 2))
 		ft_error(1);
-		exit(1);
-	}
+	if (!((((ft_strncmp(av[1], "mandel", 7) == 0))
+				|| ((ft_strncmp(av[1], "ship", 5) == 0)))
+			|| ((ft_strncmp(av[1], "julia", 6) == 0))))
+		ft_error(1);
+	if (((ft_strncmp(av[1], "mandel", 7) == 0) && (ac != 2))
+		|| ((ft_strncmp(av[1], "ship", 5) == 0) && (ac != 2)))
+		ft_error(1);
+	if ((ft_strncmp(av[1], "julia", 6) == 0) && (ac != 4))
+		ft_error(1);
 	if ((ft_strncmp(av[1], "julia", 6) == 0)
 		&& (!is_valid_input(av[2]) || !is_valid_input(av[3])))
 	{
