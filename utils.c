@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 18:26:00 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/05/02 17:05:45 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:06:03 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	change_iterations(t_fractal *fractal, int key_code)
 
 int	key_hooked(int key_code, t_fractal *fractal)
 {
-	if (key_code == XK_Escape )
+	if (key_code == XK_Escape)
 		exit(1);
 	else if (key_code == XK_Left)
 		fractal->offset_x -= 42 / fractal->zoom;
@@ -39,11 +39,9 @@ int	key_hooked(int key_code, t_fractal *fractal)
 	else if (key_code == XK_Down)
 		fractal->offset_y += 42 / fractal->zoom;
 	else if (key_code == XK_r)
-	 	init_fractal(fractal);
+		init_fractal(fractal);
 	else if (key_code == XK_c)
 		fractal->color += (255 * 255 * 255) / 100;
-	// else if (key_code == J)
-	// 	set_random_julia(&fractal->cx, &fractal->cx);
 	else if (key_code == XK_m || key_code == XK_p)
 		change_iterations(fractal, key_code);
 	draw_fractal(fractal, fractal->name);

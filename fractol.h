@@ -6,12 +6,12 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:28:44 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/05/03 17:10:06 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:13:07 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOL_H
-#define FRACTOL_H
+# define FRACTOL_H
 
 # include <fcntl.h>					/*open, close*/
 # include <math.h>					/*fabs*/
@@ -42,8 +42,8 @@ typedef struct s_fractal
 	int		y;
 	int		color;
 	double	zoom;
-	double	offset_x; // si augmente affichage decaler vers la droite
-	double	offset_y; // si augmente affichage decaler vers le haut
+	double	offset_x;
+	double	offset_y;
 
 	double	zx;
 	double	zy;
@@ -53,12 +53,6 @@ typedef struct s_fractal
 	char	*name;
 	int		max_iterations;
 }			t_fractal;
-
-// typedef struct
-// {
-// 	double x;
-// 	double y;
-// } Point;
 
 /* INIT_EXIT */
 void	init_mlx(t_fractal *fractal);
@@ -93,6 +87,6 @@ void	calcul_ship(t_fractal *fractal);
 void	zoom(t_fractal *fractal, int x, int y, int zoom);
 
 /* MAIN */
-int	main();
+int		main(int ac, char **av);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:28:38 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/05/01 16:28:36 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:17:30 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,9 @@ void	calcul_mandel(t_fractal *fractal)
 	int		i;
 	double	temp;
 
-	i = 0; // iteration dans la boucle
-
-	// initialisation de la variable complexe
+	i = 0;
 	fractal->zx = 0.0;
 	fractal->zy = 0.0;
-
-
 	fractal->cx = (fractal->x / fractal->zoom) + fractal->offset_x;
 	fractal->cy = (fractal->y / fractal->zoom) + fractal->offset_y;
 	while (i < fractal->max_iterations)
@@ -38,7 +34,7 @@ void	calcul_mandel(t_fractal *fractal)
 		i++;
 	}
 	if (i == fractal->max_iterations)
-		color_pixel(fractal, fractal->x, fractal->y, 0x000000); // pixel noir
+		color_pixel(fractal, fractal->x, fractal->y, 0x000000);
 	else
 		color_pixel(fractal, fractal->x, fractal->y, (fractal->color * i));
 }

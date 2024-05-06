@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:28:29 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/05/03 17:09:39 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:13:56 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	draw_fractal(t_fractal *fractal, char *str)
 	else if (ft_strncmp(str, "ship", 5) == 0)
 		draw_ship(fractal);
 	mlx_put_image_to_window(fractal->mlx, fractal->window, fractal->img, 0, 0);
-	return(0);
+	return (0);
 }
 
 void	*draw_mandelbrot(void *fractal_void)

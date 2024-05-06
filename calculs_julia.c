@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:28:34 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/05/03 17:06:12 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:17:04 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	calcul_julia(t_fractal *fractal)
 	int		i;
 	double	tmp;
 
+	i = 0;
 	fractal->zx = fractal->x / fractal->zoom + fractal->offset_x;
 	fractal->zy = fractal->y / fractal->zoom + fractal->offset_y;
-	i = 0;
 	while (++i < fractal->max_iterations)
 	{
 		tmp = fractal->zx;
