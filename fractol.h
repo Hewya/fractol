@@ -6,7 +6,7 @@
 /*   By: gabarnou <gabarnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:28:44 by gabarnou          #+#    #+#             */
-/*   Updated: 2024/05/06 12:13:07 by gabarnou         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:56:41 by gabarnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <fcntl.h>					/*open, close*/
 # include <math.h>					/*fabs*/
 # include <stdlib.h>				/* abs */
+# include <stdbool.h>
 # include "minilibx-linux/mlx.h"	/*includes minilibx*/
 # include "libft/libft.h"			/*libft...*/
 # include "X11/keysym.h"
@@ -88,5 +89,8 @@ void	zoom(t_fractal *fractal, int x, int y, int zoom);
 
 /* MAIN */
 int		main(int ac, char **av);
+void	check_params(int ac, char **av);
+void	ft_error(int i);
+bool 	is_valid_input(const char *str);
 
 #endif
