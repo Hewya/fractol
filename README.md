@@ -21,7 +21,7 @@ make
 ```
 
 ## How to use:
-  - Replace <Name of the fractal> by : mandel, julia or ship.
+  - Replace "Name of the fractal" by : mandel, julia or ship.
       - For julia you must have 2 parameters (exemple: -0.745429 0.05)
   
   - You can **scroll up/down to zoom** where you cursor is.
